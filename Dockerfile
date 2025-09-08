@@ -3,11 +3,13 @@ FROM node:18
 # Install pnpm
 RUN npm install -g pnpm
 
-# Create app directory
+# Set working directory
 WORKDIR /usr/src/app
 
-# Copy and install dependencies
+# Copy all files
 COPY . .
+
+# Install dependencies
 RUN pnpm install --frozen-lockfile
 
 # Build the app
