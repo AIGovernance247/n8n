@@ -1,19 +1,11 @@
-FROM node:20
 
-# Install pnpm
-RUN npm install -g pnpm
+FROM n8nio/n8n
 
-# Set working directory
-WORKDIR /usr/src/app
-
-# Copy all files
-COPY . .
-
-# Install dependencies
-RUN pnpm install --frozen-lockfile
-
-# Build the app
-RUN pnpm build
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=yourusername
+ENV N8N_BASIC_AUTH_PASSWORD=yourpassword
+ENV WEBHOOK_TUNNEL_URL=https://nhs-agent.onrender.com
+ENV N8N_HOST=0.0.0.0
+ENV N8N_PORT=5678
 
 EXPOSE 5678
-CMD ["pnpm", "start"]
