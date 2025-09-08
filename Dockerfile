@@ -1,14 +1,17 @@
 FROM node:18
 
+# Install pnpm
+RUN npm install -g pnpm
+
 # Create app directory
 WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY package*.json ./
-RUN npm install
-
-# Bundle app source
+# Copy and install dependencies
 COPY . .
+RUN pnpm install --frozen-lockfile
+
+# Build the app
+RUN pnpm build
 
 EXPOSE 5678
-CMD ["npm", "run", "start"]
+CMD ["pnpm", "start"]
