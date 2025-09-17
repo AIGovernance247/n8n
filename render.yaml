@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    plan: starter
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: your-supabase-host
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_USER
+        value: postgres.wovcxjbbhnzglsudrdsd
+      - key: DB_POSTGRESDB_PASSWORD
+        value: Defeatlisolethu1#
+      - key: DB_POSTGRESDB_SSL
+        value: true
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: false
+      - key: DB_POSTGRESDB_MAX_CONNECTIONS
+        value: 10
+      - key: DB_POSTGRESDB_IDLE_TIMEOUT
+        value: 30000
+      - key: N8N_HOST
+        value: aigovernance247-n8n.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_PROTOCOL
+        value: https
+      - key: WEBHOOK_URL
+        value: https://aigovernance247-n8n.onrender.com
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: yourusername
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yourpassword
+      - key: EXECUTIONS_MODE
+        value: queue
+      - key: QUEUE_MODE
+        value: redis
+      - key: TZ
+        value: Europe/London
+      - key: N8N_LOG_LEVEL
+        value: info
+      - key: N8N_DIAGNOSTICS_ENABLED
+        value: false
