@@ -16,4 +16,4 @@ ENV DB_POSTGRESDB_PASSWORD=Defeatlisolethu1#
 
 EXPOSE 80
 
-CMD ["n8n"]
+
