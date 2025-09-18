@@ -7,11 +7,11 @@ ENV N8N_BASIC_AUTH_PASSWORD=yourpassword
 ENV WEBHOOK_TUNNEL_URL=https://aigovernance247-n8n.onrender.com
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
-DB_TYPE=postgresdb
-DB_POSTGRESDB_HOST=aws-1-eu-west-2.pooler.supabase.com
-DB_POSTGRESDB_PORT=5432
-DB_POSTGRESDB_DATABASE=postgres
-DB_POSTGRESDB_USER=postgres.wovcxjbbhnzglsudrdsd
-DB_POSTGRESDB_PASSWORD=Defeatlisolethu1#
+ENV DB_TYPE=postgresdb
+ENV DB_POSTGRESDB_HOST=aws-1-eu-west-2.pooler.supabase.com
+ENV DB_POSTGRESDB_PORT=5432
+ENV DB_POSTGRESDB_DATABASE=postgres
+ENV DB_POSTGRESDB_USER=postgres.wovcxjbbhnzglsudrdsd
+ENV DB_POSTGRESDB_PASSWORD=Defeatlisolethu1#
 
 EXPOSE 5678
