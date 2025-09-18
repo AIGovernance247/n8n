@@ -14,6 +14,6 @@ ENV DB_POSTGRESDB_DATABASE=postgres
 ENV DB_POSTGRESDB_USER=postgres.wovcxjbbhnzglsudrdsd
 ENV DB_POSTGRESDB_PASSWORD=Defeatlisolethu1#
 
-
+EXPOSE 5678
 
 
